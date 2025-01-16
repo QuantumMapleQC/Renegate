@@ -1,0 +1,137 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Verdana', 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: url('background/ImageHandler.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Makes the background stay fixed while scrolling */
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: white; /* Ensures the content area is white */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* Main Content Heading (for "Renegade") */
+.main-content h2 {
+    color: black;
+    font-size: 32px; /* Smaller font size for "Renegade" */
+    margin-bottom: 10px;
+    font-family: 'Press Start 2P', cursive; /* Apply retro font only to h2 */
+    animation: rainbow 3s linear infinite; /* Apply rainbow animation */
+}
+
+
+/* Rainbow Animation for Text */
+@keyframes rainbow {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
+}
+
+/* Links */
+a {
+    color: #00008B;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff4500;
+    text-decoration: underline;
+}
+
+/* Donation Link */
+.donation-link {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 18px;
+    padding: 10px;
+    background-color: #ff4500;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.donation-link:hover {
+    background-color: #ff6347;
+}
+
+/* Marquee */
+.marquee-container {
+    background-color: #ff1493;
+    text-align: center;
+    padding: 5px;
+}
+
+.marquee {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Retro GIFs */
+.img-small {
+    width: 100%;
+    max-width: 350px;
+    border: 5px solid #00008B;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-small2 {
+    width: 120px;
+    height: auto;
+    border: 5px solid #00008B;
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Chatbox Embed */
+.chatbox-embed {
+    display: none;
+    width: 100%;
+    height: 300px;
+    border: 2px solid #00008B;
+    margin-top: 20px;
+}
+
+/* Footer GIFs */
+footer img {
+    width: 60px;
+    margin: 10px;
+}
+
+/* Styling for gif-links container */
+.gif-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Adjustments for text readability */
+p {
+    margin-bottom: 20px;
+}
+
