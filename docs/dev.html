@@ -3,23 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renegade Developers</title>
+    <title>Renflare Developers</title>
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
+    <div class="top-bar">
+       <div class="rainbow-text">Renflare</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dev.html">Developers</a>
+        </div>
+        <button id="theme-toggle" aria-label="Toggle Theme">🌞</button>
+    </div>
+
     <div class="main-content">
-        <h2 class="rainbow-text">Current Developpers</h2>
-        <p>Renegate is so far just an Open-Source Unstable tool, soon enough will be into a real thing!</p>
+        <h2>Current Developers</h2>
 
         <h3>Zenny</h3>
-        <p><strong>Creator / Developer / Python Coder</strong><br>
-      Zenny is the original creator who has developt a python script that also compiles shit up but works fine rn</p>
+        <p><strong>Creator / Developer</strong><br>
+            Zenny is the original creator and founder of Renflare.
+        </p>
 
         <h3>QuantumMapleQC</h3>
         <p><strong>Developer / Designer</strong><br>
-        Hi im the dev of this website that is made in HTML / CSS </p>
-        <p>Thank you to everyone who has contributed so far – together, we’re building something extraordinary!</p>
+            QuantumMapleQC is the Head Server Manager and Lead Website Developer.</p>
     </div>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        let isDarkMode = false;
+
+        themeToggle.addEventListener('click', () => {
+            isDarkMode = !isDarkMode;
+            if (isDarkMode) {
+                body.classList.add('dark-mode');
+                themeToggle.textContent = '🌙'; // Change to moon for dark mode
+            } else {
+                body.classList.remove('dark-mode');
+                themeToggle.textContent = '🌞'; // Change to sun for light mode
+            }
+        });
+    </script>
+
 </body>
 </html>

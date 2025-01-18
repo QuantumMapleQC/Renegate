@@ -1,137 +1,79 @@
-/* Importing Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
-/* Global Styles */
+/* Default light mode styles */
 body {
-    font-family: 'Verdana', 'Arial', sans-serif;
-    background-color: #f0f0f0;
-    color: black;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    background-image: url('background/ImageHandler.jpg'); /* Replace with your image URL */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Makes the background stay fixed while scrolling */
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Main Content */
-.main-content {
-    padding: 20px;
-    font-size: 16px;
-    line-height: 1.5;
-    background-color: white; /* Ensures the content area is white */
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    border-radius: 10px;
-}
-
-/* Main Content Heading (for "Renegade") */
-.main-content h2 {
-    color: black;
-    font-size: 32px; /* Smaller font size for "Renegade" */
-    margin-bottom: 10px;
-    font-family: 'Press Start 2P', cursive; /* Apply retro font only to h2 */
-    animation: rainbow 3s linear infinite; /* Apply rainbow animation */
-}
-
-
-/* Rainbow Animation for Text */
-@keyframes rainbow {
-    0% { color: red; }
-    14% { color: orange; }
-    28% { color: yellow; }
-    42% { color: green; }
-    57% { color: blue; }
-    71% { color: indigo; }
-    85% { color: violet; }
-    100% { color: red; }
-}
-
-/* Links */
-a {
-    color: #00008B;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #ff4500;
-    text-decoration: underline;
-}
-
-/* Donation Link */
-.donation-link {
-    display: block;
-    text-align: center;
-    margin: 20px 0;
-    font-size: 18px;
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
     padding: 10px;
-    background-color: #ff4500;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
 }
 
-.donation-link:hover {
-    background-color: #ff6347;
-}
-
-/* Marquee */
-.marquee-container {
-    background-color: #ff1493;
-    text-align: center;
-    padding: 5px;
-}
-
-.marquee {
-    color: white;
-    font-size: 20px;
+.logo {
+    font-size: 24px;
     font-weight: bold;
 }
 
-/* Retro GIFs */
-.img-small {
-    width: 100%;
-    max-width: 350px;
-    border: 5px solid #00008B;
-    margin-bottom: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
 }
 
-.img-small2 {
-    width: 120px;
-    height: auto;
-    border: 5px solid #00008B;
-    margin-bottom: 10px;
-    display: inline-block;
-    margin-right: 20px;
+button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
 }
 
-/* Chatbox Embed */
-.chatbox-embed {
-    display: none;
-    width: 100%;
-    height: 300px;
-    border: 2px solid #00008B;
-    margin-top: 20px;
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ddd;
 }
 
-/* Footer GIFs */
-footer img {
-    width: 60px;
-    margin: 10px;
+body.dark-mode .top-bar {
+    background-color: #1e1e1e;
 }
 
-/* Styling for gif-links container */
-.gif-links {
-    margin-top: 20px;
+body.dark-mode .nav-links a {
+    color: #bbb;
+}
+
+/* Rainbow text effect with animation */
+.rainbow-text {
+    font-size: 2rem; /* Adjusted font size smaller */
+    font-weight: bold;
     text-align: center;
+    display: inline-block;
+
+    /* Apply gradient */
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 200% 100%; /* Double the width of the gradient */
+    background-position: 0% 50%; /* Start the gradient from the left */
+    color: transparent; /* Make the text color transparent to show the gradient */
+    -webkit-background-clip: text; /* Clip the background to text */
+    background-clip: text; /* Ensure it works across all browsers */
+    
+    /* Animation */
+    animation: rainbow 5s linear infinite;
 }
 
-/* Adjustments for text readability */
-p {
-    margin-bottom: 20px;
+/* Keyframes for rainbow animation */
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%; /* Start at the left */
+    }
+    50% {
+        background-position: 100% 50%; /* Move to the right */
+    }
+    100% {
+        background-position: 0% 50%; /* Return to the left */
+    }
 }
-

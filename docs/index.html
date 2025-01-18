@@ -3,20 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renegade</title>
+    <title>Renflare</title>
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
+    <div class="top-bar">
+        <div class="rainbow-text">Renflare</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dev.html">Developers</a>
+        </div>
+        <button id="theme-toggle" aria-label="Toggle Theme">🌞</button>
+    </div>
+
     <div class="main-content">
-        <h2 class="rainbow-text">RENEGADE</h2>
-        <p>Yeah, so Renegade is an open-source platform built with Python. Right now, I’m the main developer behind the website and all that jazz. It's been a fun journey so far, but the best part is that it’s open-source, so anyone can pitch in and help shape it into something even bigger. It’s all about giving creators the freedom to do their thing and build something amazing together!</p>
-
-        <p>Join the Renegade revolution and experience a new way of connecting, creating, and collaborating. Whether you're a creator, developer, or community member, there's a place for you here. Help shape the future of Renegade – the app that’s built by the people, for the people!</p>
-
-        <p>Ready to be a part of it? Dive in and see where your creativity takes you!</p>
-        <a href="dev.html">Developpers</a>
+        <p>Welcome to Renflare! A platform where you can customize your experience, create and share images, videos, and posts, interact with others through comments and forums, and even livestream your content. Tailor your themes, connect, and explore a world of possibilities!</p>
+        <hr> 
 
     </div>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        let isDarkMode = false;
+
+        themeToggle.addEventListener('click', () => {
+            isDarkMode = !isDarkMode;
+            if (isDarkMode) {
+                body.classList.add('dark-mode');
+                themeToggle.textContent = '🌙'; // Change to moon for dark mode
+            } else {
+                body.classList.remove('dark-mode');
+                themeToggle.textContent = '🌞'; // Change to sun for light mode
+            }
+        });
+
+        // Emoji button functionality
+        const emojiButton = document.getElementById('emoji-button');
+        const emojiInput = document.getElementById('emoji-input');
+    </script>
+
 </body>
 </html>
